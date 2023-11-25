@@ -50,7 +50,22 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <script src="./script.js"></script>
+  <script>
+  function toggleMode(){
+  const html = document.documentElement
+  html.classList.toggle("light")
+
+
+  const img = document.querySelector("#profile img")
+
+  if(html.classList.contains("light")){
+    img.setAttribute("src", "assets/avatar-light.png")
+    img.setAttribute("alt", "Foto do mayk Britto, com fundo azule e óculos escuro")
+  } else{
+    img.setAttribute("src", "./assets/avatar.png")
+  }
+
+}</script>
 </body>
 
 </html>
